@@ -1,4 +1,3 @@
-'use strict'
 const numberbox = document.getElementById("numberbox");
 const slider = document.getElementById("slider");
 const progressBar = document.getElementById("progress-bar")
@@ -137,7 +136,7 @@ class Queen {
                 // console.log("inside:" + board)
                 await q.clearColor(board);
                 let table = document.getElementById(`table-${this.uuid[board]}`);
-                let row = table.firstChild.childNodes[r];
+                let row = table.rows[r];
                 row.getElementsByTagName("td")[i].innerHTML = queen;
 
                 this.position[board][r] = i;
@@ -166,13 +165,8 @@ playButton.onclick = async function visualise() {
     n = numberbox.value;
     q = new Queen();
 
-    if (n > 8) {
-        numberbox.value = "";
-        alert("Queen value is too large");
-        return;
-    } else if (n < 1) {
-        numberbox.value = "";
-        alert("Queen value is too small");
+    if (n < 1 || n > 8) {
+        alert("Please choose a valid board size between 1 and 8.");
         return;
     }
 

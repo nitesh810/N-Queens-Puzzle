@@ -177,12 +177,7 @@ playButton.onclick = async function visualise() {
     }
 
     // Removing all the of previous execution context
-    while (chessBoard.hasChildNodes()) {
-        chessBoard.removeChild(chessBoard.firstChild);
-    }
-    if (arrangement.hasChildNodes()) {
-        arrangement.removeChild(arrangement.lastChild)
-    }
+    chessBoard.innerHTML = '';
 
     const para = document.createElement("p");
     para.setAttribute("class", "queen-info");

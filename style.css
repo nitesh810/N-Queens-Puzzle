@@ -55,9 +55,9 @@ div.n-queen {
   transition: 0.3s;
 }
 
-.inputbox input:focus ~ label,
-.inputbox input:disabled ~ label,
-.inputbox input:valid ~ label {
+.inputbox input:focus ~ label, /* input:focus: Targets the <input> element when it is focused (clicked or active for typing). */
+.inputbox input:disabled ~ label, /* input:disabled: Targets the <input> element when it is disabled (not editable by the user). */
+.inputbox input:valid ~ label { /* input:valid: Targets the <input> element when it has a valid value (eg : the value satisfies). */
   top: -9px;
   font-size: 12px;
   font-weight: 400;

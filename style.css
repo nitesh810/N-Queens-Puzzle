@@ -20,13 +20,12 @@ body {
   padding: 0.5em;
 }
 
-div.n-queen {
+div.n-queen { /* selector div.n-queen refers to a div element with a class of n-queen */
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
   max-width: 450px;
-  /* border: 1px solid red; */
 }
 
 .inputbox {
@@ -67,14 +66,13 @@ div.n-queen {
   position: absolute;
   left: 5%;
   width: 90%;
-  /* text-align: center; */
-  margin: 0 auto;
+  margin: 0 auto; /* The element will have no space above and below (0 vertical margin).
+The element will be centered horizontally within its parent container due to the auto horizontal margin. */
   top: 4em;
-  /* border: 2px solid red; */
 }
 
 .slider {
-  -webkit-appearance: none;
+  -webkit-appearance: none; /* -webkit-appearance allowing you to customize or reset their appearance in WebKit-based browsers */
   width: 100%;
   margin: 0 auto;
   height: 7px;
@@ -111,7 +109,8 @@ div.n-queen {
   top: -2px;
   cursor: pointer;
   background-color: #fa7921;
-  border-radius: 50%;
+  border-radius: 50%; /* makes an element's corners fully rounded, turning it into a circle 
+  (if the width and height are equal) or an oval (if the width and height are different) */
   z-index: 2;
 }
 
@@ -121,18 +120,6 @@ div.n-queen {
   width: 15px;
   z-index: 1;
   color: #ffba08;
-}
-
-/* Mozilla firefox */
-.slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  background-color: #fa7921;
-  cursor: pointer;
-  position: relative;
-  top: -2px;
-  border-radius: 50%;
-  z-index: 2;
 }
 
 .slider::-webkit-slider-thumb:hover {
